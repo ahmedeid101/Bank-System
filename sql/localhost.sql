@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: June 18, 2021 at 10:01 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 8.0.7
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -17,15 +8,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `sparks_bank`
---
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `transaction`
---
 
 CREATE TABLE `transaction` (
   `sno` int(11) NOT NULL,
@@ -35,11 +18,8 @@ CREATE TABLE `transaction` (
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
 
---
 -- Table structure for table `users`
---
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -48,9 +28,7 @@ CREATE TABLE `users` (
   `balance` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
 -- Dumping data for table `users`
---
 
 INSERT INTO `users` (`id`, `name`, `email`, `balance`) VALUES
 (1, 'ahmed', 'ahmed@email.com', 10000),
@@ -64,35 +42,27 @@ INSERT INTO `users` (`id`, `name`, `email`, `balance`) VALUES
 (9, 'fared', 'fared@email.com', 90000),
 (10, 'hesham', 'hesham@email.com', 100000);
 
---
--- Indexes for dumped tables
---
+-- Indexes for dumped tables ---
 
---
 -- Indexes for table `transaction`
---
+
 ALTER TABLE `transaction`
   ADD PRIMARY KEY (`sno`);
-
---
+  
 -- Indexes for table `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
+-- AUTO_INCREMENT for dumped tables---
 
 --
 -- AUTO_INCREMENT for table `transaction`
---
+
 ALTER TABLE `transaction`
   MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT;
 
---
 -- AUTO_INCREMENT for table `users`
---
+
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
